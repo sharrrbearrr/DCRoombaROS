@@ -35,9 +35,37 @@ catkin_create_pkg your_package_name rospy
 
 Step 3
 
-Save the attached code in text files using the echo commands.
+Save the attached code in text files using the echo commands, while in the workspace.
 
 Step 4
-Run
+In three different terminal windows run following command
+
+Terminal 1 [run roscore]:
+export ROS_MASTER_URI=http://[pi_ip_address]:11311
+export ROS_IP=[pi_ip_address]
+roscore
+
+Terminal 2 [run roslaunch driver]:
+export ROS_MASTER_URI=http://[pi_ip_address]:11311
+export ROS_IP=[pi_ip_address]
+cd ~/irobot/
+source develop/setup.bash
+roslaunch ca_driver  create_2.launch
+
+Terminal 3 [run keyboard, press k or l to rotate the roomba]:
+export ROS_MASTER_URI=http://[pi_ip_address]:11311
+export ROS_IP=[pi_ip_address]
+cd ~/irobot/
+source develop/setup.bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+
+
+Please Note
+In addition, you can find all ros packages available by typing
+rospack list
+
+
+Step five
+Power the Raspberry Pi with a battery pack and connect the serial cable to the Pi and the Roomba.
 
 
