@@ -2,7 +2,7 @@
 
 This a project built on a Raaspberry Pi running Ubuntu using ROS Kinetic software .
 
-Step 1
+# Step 1
 Download the reccomended ROS Kinetic software following the instructions in the link below. Make sure to follow the Desktop Full Reccommended Install.
 
 # Step 2
@@ -33,11 +33,11 @@ catkin_create_pkg your_package_name rospy
 ‘catkin_create_pkg’ is the command for creating the new package.
 ‘rospy’ is the dependency of the new package created by the rospy package.
 
-Step 3
+# Step 3
 
 Save the attached code in text files using the echo commands, while in the workspace.
 
-Step 4
+# Step 4
 In three different terminal windows run following command
 
 Terminal 1 [run roscore]:
@@ -65,7 +65,7 @@ In addition, you can find all ros packages available by typing
 rospack list
 
 
-Step five
+# Step 5
 Power the Raspberry Pi with a battery pack and connect the serial cable to the Pi and the Roomba.
 
 
